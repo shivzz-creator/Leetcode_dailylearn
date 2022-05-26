@@ -1,0 +1,19 @@
+class Solution {
+    public int deleteAndEarn(int[] nums) {
+       int [] arr = new int[10001];
+        for(int val : nums ) arr[val]++;  // for count
+        int exc = 0 ;
+        int inc = 0 ;
+        
+        for(int i = 0 ; i<10001 ; i++ ){
+            int new_exc = Math.max(exc , inc) ;
+            int new_inc = exc+ i*arr[i];
+            exc=new_exc;
+            inc= new_inc;
+    
+        }
+        
+        return Math.max(inc , exc) ;
+        
+    }
+}
