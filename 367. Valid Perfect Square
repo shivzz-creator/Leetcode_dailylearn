@@ -1,0 +1,33 @@
+class Solution {
+    public boolean isPerfectSquare(int num) {
+     long lo = 0 ;
+    long hi  = Integer.MAX_VALUE;
+    while(lo<=hi){
+        long mid = (lo+hi)/2;
+        if(mid*mid==num){
+            return true ;
+        }else if(mid*mid>num){
+                hi = mid-1;
+        }else{
+            lo = mid+1 ;
+        }
+    }
+        return false ;
+        
+        
+        
+        
+        
+        //This os O(root N ) solution
+        // int ans =1;
+//         for(int i = 0  ;  i*i<num ; i++){
+            
+//          ans = i ;
+//         }
+//         ans++;
+//         return(ans*ans == num );
+        
+        
+        
+    }
+}
